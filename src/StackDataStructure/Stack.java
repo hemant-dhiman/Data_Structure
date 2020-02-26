@@ -1,4 +1,4 @@
-package com.Data_Structure;
+package StackDataStructure;
 
 public class Stack {
     private int[] stack;

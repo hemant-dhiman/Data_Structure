@@ -1,4 +1,4 @@
-package com.Data_Structure;
+package StackDataStructure;
 
 class Main {
     public static void main(String[] args) {
