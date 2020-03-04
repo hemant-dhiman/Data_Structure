@@ -1,5 +1,6 @@
 package Practice.geeksforgeeks_practice;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -36,6 +37,7 @@ public class Median_In_a_Row_Wise_sorted_Matrix {
         Scanner sc = new Scanner(System.in);
         int test_cases = sc.nextInt();
         int[][] arr;
+        int sum = 0;
         //test cases
         for (int i = 0; i < test_cases; i++) {
             int row = sc.nextInt();
@@ -53,9 +55,13 @@ public class Median_In_a_Row_Wise_sorted_Matrix {
                     System.out.println("arr[" + c + "][" + r + "]: " + arr[c][r]);
                 }
             }*/
-
-
-
+            Arrays.sort(arr,0,3);
+            Arrays.sort(arr,4,6);
+            Arrays.sort(arr,7,9);
+            System.out.println(Arrays.toString(arr));
+            //System.out.println(arr[(col * row + 1) / 2]);
+            //test cases loop ends
         }
     }
+
 }
