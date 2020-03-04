@@ -1,4 +1,4 @@
-package Practice;
+package Practice.Binary_Search;
 
 public class Binary_search_recursion {
 

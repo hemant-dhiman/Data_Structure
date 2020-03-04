@@ -1,4 +1,4 @@
-package Practice;
+package Practice.Binary_Search;
 
 import java.util.Arrays;
 import java.util.Scanner;
