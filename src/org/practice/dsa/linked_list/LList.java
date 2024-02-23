@@ -115,6 +115,42 @@ public class LList {
         return false;
     }
 
+    public boolean insert(int index, int value) {
+        if (index < 0 || index > this.length) return false;
+
+        if (index == 0) {
+            this.prepend(value);
+            return true;
+        }
+
+        if (index == this.length) {
+            this.append(value);
+            return true;
+        }
+
+        LlNode newNode = new LlNode(value);
+        LlNode temp = get(index - 1);
+        newNode.next = temp.next;
+        temp.next = newNode;
+        this.length++;
+        return true;
+    }
+
+    public LlNode remove(int index) {
+        if (index < 0 || index >= this.length) return null;
+
+        if (index == 0) return this.removeFirst();
+
+        if (index == this.length - 1) return this.removeLast();
+
+        LlNode previous = this.get(index - 1);
+        LlNode current = previous.next;
+
+        previous.next = current.next;
+        current.next = null;
+        this.length--;
+        return current;
+    }
 
     public void getHead() {
         System.out.println("Head: " + head.value);

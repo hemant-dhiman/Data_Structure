@@ -64,5 +64,36 @@ public class Main {
         testingGet.getTail();
         testingGet.getLength();
         testingGet.printLList();
+
+        System.out.println("---testingInsert---");
+
+        LList testingInsert = new LList(0);
+        testingInsert.append(2);
+        testingInsert.getHead();
+        testingInsert.getTail();
+        testingInsert.getLength();
+        testingInsert.printLList();
+        System.out.println("Insert at index 1 with value 1: " + testingInsert.insert(1, 1));
+        testingInsert.getHead();
+        testingInsert.getTail();
+        testingInsert.getLength();
+        testingInsert.printLList();
+
+        System.out.println("---testingRemove---");
+        LList testingRemove = new LList(10);
+        testingRemove.append(14);
+        testingRemove.append(22);
+        testingRemove.append(35);
+
+        testingRemove.getHead();
+        testingRemove.getTail();
+        testingRemove.getLength();
+        testingRemove.printLList();
+        System.out.println("Remove at index 2 with value 22: " + testingRemove.remove(2));
+        testingRemove.getHead();
+        testingRemove.getTail();
+        testingRemove.getLength();
+        testingRemove.printLList();
+
     }
 }
