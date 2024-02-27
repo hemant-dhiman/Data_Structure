@@ -95,5 +95,22 @@ public class Main {
         testingRemove.getLength();
         testingRemove.printLList();
 
+        System.out.println("---testingReverse---");
+        LList testingReverse = new LList(1);
+        testingReverse.append(2);
+        testingReverse.append(3);
+        testingReverse.append(4);
+
+        testingReverse.getHead();
+        testingReverse.getTail();
+        testingReverse.getLength();
+        testingReverse.printLList();
+
+        System.out.println("Reverse Linked list");
+        testingReverse.reverse();
+        testingReverse.getHead();
+        testingReverse.getTail();
+        testingReverse.getLength();
+        testingReverse.printLList();
     }
 }

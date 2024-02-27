@@ -152,6 +152,22 @@ public class LList {
         return current;
     }
 
+    public void reverse() {
+        LlNode temp = this.head;
+        this.head = this.tail;
+        this.tail = temp;
+
+        LlNode before = null;
+        LlNode after = temp.next;
+
+        for (int i = 0; i < this.length; i++) {
+            after = temp.next;
+            temp.next = before;
+            before = temp;
+            temp = after;
+        }
+    }
+
     public void getHead() {
         System.out.println("Head: " + head.value);
     }
