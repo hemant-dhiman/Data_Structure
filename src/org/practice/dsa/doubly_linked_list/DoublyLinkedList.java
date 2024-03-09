@@ -75,4 +75,34 @@ public class DoublyLinkedList {
         this.length--;
         return temp;
     }
+
+    public void prepend(int value) {
+        Node newNode = new Node(value);
+        if (this.length == 0) {
+            this.head = newNode;
+            this.tail = newNode;
+        } else {
+            newNode.next = this.head;
+            this.head.previous = newNode;
+            this.head = newNode;
+        }
+        this.length++;
+    }
+
+    public Node removeFirst() {
+        if (this.length == 0) return null;
+        Node temp = this.head;
+        if (this.length == 1) {
+            this.head = null;
+            this.tail = null;
+        } else {
+            this.head = this.head.next;
+            this.head.previous = null;
+            temp.next = null;
+        }
+        this.length--;
+        return temp;
+    }
+
+
 }
