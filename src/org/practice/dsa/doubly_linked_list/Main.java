@@ -60,5 +60,24 @@ public class Main {
 
         testGet.printDoublyLL();
 
+        System.out.println("======insert======");
+        DoublyLinkedList doublyLinkedListInsert = new DoublyLinkedList(0);
+        doublyLinkedListInsert.append(1);
+        doublyLinkedListInsert.append(2);
+        doublyLinkedListInsert.append(3);
+
+        doublyLinkedListInsert.printDoublyLL();
+
+        System.out.println("======insert at 0 ======");
+        System.out.println("Inserting -1 at index 0: " + doublyLinkedListInsert.insert(0,-1));
+        doublyLinkedListInsert.printDoublyLL();
+        System.out.println("======insert at 3 ======");
+        System.out.println("Inserting 4 at index 4: " + doublyLinkedListInsert.insert(4,4));
+        doublyLinkedListInsert.printDoublyLL();
+        System.out.println("======insert at 1 ======");
+        System.out.println("Inserting 100 at index 1: " + doublyLinkedListInsert.insert(1,100));
+        doublyLinkedListInsert.printDoublyLL();
+
+
     }
 }

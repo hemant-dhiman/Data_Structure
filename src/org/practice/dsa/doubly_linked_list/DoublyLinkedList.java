@@ -9,7 +9,7 @@ public class DoublyLinkedList {
     private Node tail;
     private int length;
 
-    class Node {
+    public class Node {
         int value;
         Node next;
         Node previous;
@@ -118,6 +118,47 @@ public class DoublyLinkedList {
                 temp = temp.previous;
             }
         }
+        return temp;
+    }
+
+    public boolean insert(int index, int value) {
+        if (index < 0 || index > this.length) return false;
+
+        if (index == 0) {
+            this.prepend(value);
+            return true;
+        }
+
+        if (index == this.length) {
+            this.append(value);
+            return true;
+        }
+
+        Node newNode = new Node(value);
+        Node before = this.get(index - 1);
+        Node after = before.next;
+        newNode.previous = before;
+        newNode.next = after;
+
+        before.next = newNode;
+        after.previous = newNode;
+
+        this.length++;
+        return true;
+    }
+
+    public Node remove(int index) {
+        if (index < 0 || index >= this.length) return null;
+        if (index == 0) return this.removeFirst();
+        if (index == this.length - 1) return this.removeLast();
+
+        Node temp = this.get(index - 1);
+        temp.next.previous = temp.previous;
+        temp.previous.next = temp.next;
+        temp.next = null;
+        temp.previous = null;
+
+        this.length--;
         return temp;
     }
 
